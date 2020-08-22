@@ -1,0 +1,127 @@
+@import 'style.css';
+
+body {
+	padding: 3em;
+	color: #456;
+}
+
+.ic-parent {
+	position: fixed;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+
+	background: #f9f9f9;
+	border-left: 3px solid;
+}
+
+.ic {
+	display: block;
+	height: 50px;
+	padding: 0.75em;
+}
+
+.ic:hover {
+	background: #456;
+}
+
+h2 {
+	background: #4562;
+	padding: 0.25em 0.5em;
+}
+
+p {
+	text-align: justify;
+	padding: 1em;
+}
+
+p,
+li {
+	box-shadow: 1px 1px 5px #4565 inset;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	list-style: none;
+	padding: 0.5em 1em;
+}
+
+/*  ****************  */
+.container {
+	margin: 0 0 3em 0;
+}
+
+h1 {
+	font-size: xx-large;
+}
+
+h2 {
+	display: inline-block;
+	border-bottom: 2px solid;
+}
+
+label {
+	display: inline-block;
+	padding: 2px 4px;
+	margin: 5px;
+}
+
+.row:nth-of-type(even) label:nth-last-of-type(odd),
+.row:nth-of-type(odd) label:nth-last-of-type(even) {
+	background-color: #0001;
+}
+
+.content {
+	display: flex;
+	flex-flow: wrap;
+	justify-content: space-between;
+}
+
+.content section {
+	margin: 1%;
+}
+
+.about-section {
+	width: 48%;
+}
+
+.port-section {
+	width: 31%;
+}
+
+.port-section h2 {
+	display: block;
+}
+
+.port-section a {
+	text-decoration: none;
+	color: inherit;
+}
+
+sup {
+	border-bottom: 1px solid;
+}
+
+@media screen and (max-width: 600px) {
+	body {
+		padding: 1em;
+	}
+
+	.container,
+	.content {
+		margin: 0;
+	}
+
+	.content {
+		display: block;
+	}
+
+	.content section {
+		width: auto;
+		margin: 1em auto;
+	}
+}

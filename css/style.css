@@ -1,0 +1,36 @@
+@import url('https://fonts.google.com/css?family=Laila');
+
+* {
+	box-sizing: border-box;
+	font-family: Laila;
+}
+
+*:not(ol):not(ul):not(li) {
+	margin: 0;
+}
+
+::selection {
+	color: whitesmoke;
+	background: #3458;
+}
+
+::-webkit-scrollbar {
+	background: #3451;
+	width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #3455;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #3459;
+}
+
+body {
+	background: url(../images/bg.jpg);
+}
+
+h1 {
+	padding: 1em 0;
+}
