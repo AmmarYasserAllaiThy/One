@@ -100,7 +100,7 @@ button {
 	background: #4562;
 	font-size: 1.25em;
 	border-radius: 50px;
-	border: none;
+	border: 2px solid #4564;
 	outline: none;
 	padding: 0.35em 1em;
 }
@@ -118,7 +118,8 @@ li {
 	padding: 0.5em 1em;
 }
 
-.course {
+.course,
+.app.android {
 	position: relative;
 	padding-right: 45px;
 }
@@ -130,7 +131,7 @@ sup,
 
 .from,
 .ic-site {
-	height: 25px;
+	height: 20px;
 	margin: 0 10px;
 	vertical-align: middle;
 
@@ -140,32 +141,34 @@ sup,
 	transform: translateY(-50%);
 }
 
-.row label {
+.row {
+	text-align: center;
+}
+
+.skill,
+.dev-tool {
 	display: inline-block;
 	padding: 0.25em 0.75em;
 	margin: 0.25em;
 	background: #4562;
 	border-radius: 25px;
+	border: 2px solid #4564;
 	box-shadow: 1px 3px 6px #4565;
 	min-width: 85px;
 	text-align: center;
 }
 
-label.excellent {
+.skill.excellent {
 	background: #4f66;
 }
-label.intermediate {
+.skill.intermediate {
 	background: #ff66;
 }
 
-.row label:hover {
+.skill:hover,
+.dev-tool:hover {
 	box-shadow: 1px 1px 5px #4565 inset;
 }
-
-/* .row:nth-of-type(even) label:nth-last-of-type(odd),
-.row:nth-of-type(odd) label:nth-last-of-type(even) {
-	background: #4565;
-} */
 
 p {
 	padding: 1em;
@@ -174,8 +177,29 @@ p {
 p,
 li,
 .shadow {
-	box-shadow: 1px 1px 5px #4565 inset;
-	/* 0 22px 44px rgba(0, 0, 0, 0.1); */
+	box-shadow: 
+	/* 1px 1px 5px #4565 inset; */ 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.app.web {
+	animation: live 2s ease-in infinite;
+}
+
+@keyframes live {
+	0% {
+		text-shadow: 1px 1px 5px #e13c7355;
+	}
+	50% {
+		text-shadow: 1px 1px 5px #e13c73;
+	}
+	100% {
+		text-shadow: 1px 1px 5px #e13c7355;
+	}
+}
+
+#this {
+	font-family: Courier !important;
+	font-weight: bold;
 }
 
 .contact-section p {
