@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apps</title>
+    <link rel="stylesheet" href="css/app.css">
+    <style>
+        ul.abstract {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--accent-inverse);
+            font-size: 1.75em;
+        }
+
+        ul,
+        .row {
+            border-radius: 10px;
+        }
+
+        .row {
+            padding: 0.3em 2em 0.3em 0.75em;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .row::after {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            right: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.85;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .row.Android::after {
+            content: url(../images/ic-android.svg);
+        }
+
+        .row.Desktop::after {
+            content: url(../images/ic-desktop.svg);
+        }
+
+        .row.Web::after {
+            content: url(../images/ic-web.svg);
+        }
+
+        .row:hover {
+            background: var(--accent-inverse);
+        }
+
+        .row:hover::after {
+            right: 10px;
+        }
+
+        .row a {
+            display: block;
+        }
+
+        .row:last-of-type {
+            border-top: 1px solid var(--accent-inverse);
+        }
+
+        @media screen and (max-width: 768px) {
+            ul.abstract {
+                left: 0;
+                transform: translate(0, calc(-50% - 1em));
+                font-size: 1.35em;
+                margin: 1em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="abstract">
+        <li class="row layer-title">My Apps</li>
+
+        <li class="row Desktop"><a href="DCAT.html">Daily Classes Activity Tracker</a></li>
+        <li class="row Android">
+            <a href="https://play.google.com/store/search?q=Cropperoid&c=apps&hl=en">Cropperoid</a>
+        </li>
+        <li class="row Desktop"><a href="WIFI.html">Wi-Fi Passwords</a></li>
+        <li class="row Desktop"><a href="Mark.html">Mark as Completed</a></li>
+        <li class="row Web"><a href="https://just-paint.netlify.app">Just Paint</a></li>
+        <li class="row Desktop"><a href="Files.html">Files Manager</a></li>
+        <li class="row Desktop"><a href="Barcode.html">Barcode & Qrcode</a></li>
+        <li class="row"><a href="app-full-backup.html">_TEMPLATE</a></li>
+    </ul>
+</body>
+
+</html>

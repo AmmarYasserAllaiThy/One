@@ -1,0 +1,405 @@
+@import 'global.css';
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+/* ? ---------- Header start ----------  */
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 var(--sitePadding);
+	background: var(--header-bg);
+	box-shadow: 0 0 10px var(--shadow);
+	border-bottom: 1px solid var(--black-inverse);
+	z-index: 1;
+}
+
+.header.sticky {
+	position: sticky;
+	top: 0;
+	left: 0;
+	border: none;
+}
+
+.header,
+.title-section {
+	background: var(--title-bg);
+	color: var(--_white);
+}
+
+/* ? ---------- Nav start ----------  */
+
+nav {
+	display: flex;
+}
+
+.nav-ul li,
+.nav-ul li a,
+.nav-btn {
+	display: inline-block;
+}
+
+.nav-ul li a,
+.nav-btn {
+	padding: 0.75em 0.5em;
+}
+
+.nav-ul li a:hover {
+	background: var(--white-light);
+	color: var(--black-light);
+}
+
+.nav-btn {
+	border: none;
+	outline: none;
+	background: transparent;
+	cursor: pointer;
+	color: inherit;
+}
+
+.nav-btn.bars {
+	display: none;
+}
+
+ul.nav-ul.responsive,
+ul.nav-ul.responsive li,
+ul.nav-ul.responsive li a {
+	display: block;
+	text-align: center;
+}
+
+ul.nav-ul.responsive {
+	position: fixed;
+	right: 0;
+	top: 54px;
+	z-index: 2;
+
+	width: 100%;
+	height: 100%;
+	color: var(--black-light);
+	background: var(--white-light);
+}
+
+ul.nav-ul.responsive li {
+	border-bottom: 1px solid var(--accent-inverse);
+}
+
+/* ? ---------- Nav end ----------  */
+/* ? ---------- Header end ----------  */
+
+/* ? ---------- Container start ----------  */
+
+.container {
+	max-width: var(--w);
+	margin: 3em auto;
+	padding: 1em;
+}
+
+.container:last-of-type {
+	margin-bottom: 0;
+}
+
+/* ? ---------- Container end ----------  */
+
+/* ? ---------- Bubble start ----------  */
+
+.bubble {
+	position: relative;
+}
+
+.bubble::after {
+	content: '';
+	position: absolute;
+	--r: 36px;
+	bottom: calc(var(--r) / -2);
+	right: calc(var(--r) / 2);
+	width: var(--r);
+	height: var(--r);
+	border-radius: var(--r);
+	background: var(--layer-bg);
+	border: 1px solid var(--black-inverse);
+	box-shadow: 1px 1px 6px var(--black-inverse);
+	transition: all ease 0.5s;
+	z-index: 0;
+}
+
+.bubble:hover::after {
+	background: var(--black-inverse);
+	/* todo --r: 100%; */
+	border-radius: 6px;
+	bottom: 0;
+	right: 0;
+}
+
+/* ? ---------- Bubble end ----------  */
+
+/* ? ---------- title-section start ----------  */
+
+.title-section {
+	text-shadow: 3px 3px 5px var(--_black-inverse);
+	padding: 3em var(--sitePadding);
+}
+
+.app-name {
+	margin: 1em auto;
+	text-align: center;
+}
+
+/* ? ---------- title-section end ----------  */
+
+/* ? ---------- body-section start ----------  */
+
+.body-section {
+	overflow: hidden;
+}
+
+/* ? ---------- Layer start ----------  */
+
+.layer {
+	background: var(--layer-bg);
+	border-radius: 6px;
+	box-shadow: 3px 3px 9px var(--shadow);
+	padding: 1em;
+	margin-bottom: 2.5em;
+}
+
+.layer-title {
+	border-bottom: 1px solid var(--accent-inverse);
+	padding-bottom: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+/* ? ---------- Layer end ----------  */
+
+/* ? ---------- aside start ----------  */
+
+.aside.left {
+	float: left;
+	width: 65%;
+}
+
+.aside.right {
+	float: right;
+	width: 31%;
+}
+
+/* ? ---------- aside end ----------  */
+
+/* ? ---------- App start ----------  */
+
+.info-container {
+	padding: 0;
+}
+
+/* ? ---------- Preview end ----------  */
+
+.app-image,
+.app-screenshot {
+	display: block;
+}
+
+.app-image {
+	margin: auto;
+	max-width: 100%;
+	width: 100%;
+	height: 475px;
+	border-radius: 6px 6px 0 0;
+	cursor: pointer;
+}
+
+.app-image.long {
+	width: auto;
+	border-radius: 0;
+}
+
+.ctrl-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 1px solid var(--white-light);
+}
+
+.ctrl-container .ctrl-btn {
+	background: var(--white-light);
+	padding: 0.75em;
+	cursor: pointer;
+}
+
+.ctrl-container .ctrl-btn:hover {
+	background: var(--accent-inverse);
+}
+
+.ctrl-container .dots-container {
+	text-align: center;
+}
+
+.ctrl-container .dots-container .dot {
+	color: var(--black-inverse);
+	margin: auto 2px;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+
+.ctrl-container .dots-container .dot:hover,
+.ctrl-container .dots-container .dot.active {
+	color: var(--black-light);
+}
+
+/* ? ---------- Preview end ----------  */
+
+/* ? ---------- Desc start ----------  */
+
+.app-desc {
+	padding: 0.75em 1em 1.5em;
+}
+
+.app-desc h1,
+.app-desc h2,
+.app-desc h3,
+.app-desc h4,
+.app-desc h5,
+.app-desc h6 {
+	margin: 0.5em auto;
+}
+
+/* ? ---------- App end ----------  */
+/* ? ---------- body-section end ----------  */
+
+/* ? ---------- Skills & Tags ul start ----------  */
+
+.skills-ul li,
+.tags-ul li {
+	position: relative;
+	--brd-clr: var(--accent-inverse);
+}
+
+.skills-ul li {
+	display: block;
+	padding: 0.5em;
+}
+
+.skills-ul li:not(:last-of-type) {
+	border-bottom: 1px solid var(--brd-clr);
+}
+
+.tags-ul li {
+	display: inline-block;
+	border: 1px solid var(--brd-clr);
+	margin: 0.2em 0.1em;
+	padding: 0.15em 0.5em;
+}
+
+.tags-ul li,
+.tags-ul li::before {
+	border-radius: 6px;
+}
+
+.skills-ul li::before,
+.tags-ul li::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	background: var(--brd-clr);
+	transition: all 0.5s ease-out;
+}
+
+.skills-ul li:hover::before,
+.tags-ul li:hover::before {
+	width: 100%;
+}
+
+/* ? ---------- Skills & Tags ul end ----------  */
+
+/* ? ---------- Screenshots start ----------  */
+
+.screenshots-section {
+	padding: 1em;
+	display: grid;
+	grid-auto-flow: column;
+	grid-gap: 0.75em;
+	overflow: auto;
+
+	margin: -1em;
+	margin-top: auto;
+}
+.screenshots-section article:last-of-type {
+	padding-right: 1em;
+}
+
+.app-screenshot {
+	max-width: 425px;
+	max-height: 200px;
+}
+
+/* ? ---------- Screenshots end ----------  */
+
+/* ? ---------- footer start ----------  */
+
+.footer {
+	padding: 1em;
+	text-align: center;
+	background: var(--accent-inverse);
+	border-top: 1px solid var(--black-inverse);
+}
+
+/* ? ---------- External links start ----------  */
+
+.footer .links-ul,
+.footer .links-ul li,
+.footer .links-ul li a {
+	display: inline-block;
+}
+
+.footer .links-ul {
+	padding: 1em;
+	margin-bottom: 1em;
+	border-bottom: 1px solid var(--accent-inverse);
+}
+
+.footer .links-ul li a {
+	padding: 0 0.25em;
+}
+
+/* ? ---------- External links end ----------  */
+/* ? ---------- footer end ----------  */
+
+@media screen and (max-width: 1100px) {
+	.header {
+		padding: 0 1em;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.nav-btn.bars {
+		display: inline-block;
+	}
+
+	ul.nav-ul {
+		display: none;
+	}
+
+	.title-section {
+		padding: 1em;
+	}
+
+	.aside.left,
+	.aside.right {
+		float: none;
+		width: 100%;
+	}
+
+	.app-image {
+		height: 250px;
+	}
+
+	.ctrl-container * {
+		font-size: 0.9em;
+	}
+}

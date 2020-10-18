@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App details</title>
+    <link rel="icon" href="https://cdn1.iconfinder.com/data/icons/color-bold-style/21/09_1-512.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+
+    <!--*--------------------- Header start ----------------------->
+    <header class="header">
+        <h3 class="name title">Ammar Yasser</h3>
+
+        <nav>
+            <ul class="abstract nav-ul hide">
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Portfolio">Portfolio</a></li>
+                <li><a href="#Contact">Contact</a></li>
+                <li><a href="#Resume">Resume</a></li>
+                <li><a href="#Resume">Blog</a></li>
+            </ul>
+            <button class="fa fa-lg fa-adjust nav-btn adjust"></button>
+            <button class="fa fa-lg fa-bars nav-btn bars hide"></button>
+        </nav>
+    </header>
+    <!--*--------------------- Header end ----------------------->
+
+
+    <!--*--------------------- Title section start ----------------------->
+    <section class="title-section">
+        <h3 class="app-name large-title"></h3>
+    </section>
+    <!--*--------------------- Title section end ----------------------->
+
+
+    <!--*--------------------- Body section start ----------------------->
+    <section class="container body-section">
+        <aside class="aside left">
+            <section class="layer bubble info-container">
+
+                <div class="preview-container">
+                    <img class="app-image" alt="App image">
+                    <p class="app-image-caption caption"></p>
+
+                    <div class="ctrl-container">
+                        <button class="ctrl-btn abstract prev fa fa-lg fa-chevron-left"></button>
+                        <div class="dots-container"></div>
+                        <button class="ctrl-btn abstract next fa fa-lg fa-chevron-right"></button>
+                    </div>
+                </div>
+
+                <article class="app-desc"></article>
+
+            </section>
+        </aside>
+
+        <aside class="aside right">
+
+            <section class="layer bubble">
+                <h3 class="title layer-title">Date</h3>
+                <p class="app-date"></p>
+            </section>
+
+            <section class="layer bubble skills-container">
+                <h3 class="title layer-title">Technologies / Skills</h3>
+                <ul class="skills-ul abstract"></ul>
+            </section>
+
+            <section class="layer bubble tags-container">
+                <h3 class="title layer-title">Tags</h3>
+                <ul class="tags-ul abstract"></ul>
+            </section>
+
+        </aside>
+    </section>
+    <!--*--------------------- Body section end ----------------------->
+
+
+    <!--*--------------------- Footer start ----------------------->
+    <footer class="footer">
+        <section>
+            <ul class="links-ul abstract">
+                <li><a href="#" class="fa fa-3x fa-github"></a></li>
+                <li><a href="#" class="fa fa-3x fa-download"></a></li>
+                <li><a href="#" class="fa fa-3x fa-share-alt"></a></li>
+            </ul>
+        </section>
+        <p>Developed with <i class="fa fa-heart" style="color: red;"></i> by Ammar Yasser AllaiThy</p>
+        <p class="code">All rights reserved <i class="fa fa-copyright"></i> 2020</p>
+    </footer>
+    <!--*--------------------- Footer end ----------------------->
+
+
+    <script>
+        const APP_TYPE = 'Desktop'
+        const APP_NAME = 'Mark as Completed'
+        const APP_IMAGES_DIR = 'desktop/'
+        const APP_IMAGES = [{ src: '', caption: "" },]
+        const APP_DESC =
+            `A tool helps you in Marking...
+            <ul>
+                <li>Movies,</li>
+                <li>Series episodes,</li>
+                <li>Courses videos,</li>
+                <li>Lectures,</li>
+                <li>Records,</li>
+                <li>PDFs</li>
+            </ul>
+            as Completed, to facilitate their manipulating, and save your time and effort.
+            <br>Don't memorize or move them, Just Mark as Completed
+            <p class='quote'>Completed it, Mark it <i class='fa fa-check'></i></p>
+            `
+        const APP_DATE = 'May 6, 2017'
+        const APP_SKILLS = ['Java']
+        const APP_TAGS = ['Windows registry', 'Shell', 'Right-click menu', 'Files', 'Directories', 'CLI', 'OS',]
+    </script>
+
+    <script src="js/ui.js"></script>
+    <script src="js/data.js"></script>
+</body>
+
+</html>
