@@ -171,6 +171,10 @@
                 {
                     "src": "wifi.3.PNG",
                     "caption": "Copy the password to clipboard"
+                },
+                {
+                    "src": "Preview.gif",
+                    "caption": "How to use"
                 }
             ]
         },
@@ -188,9 +192,9 @@
         "CAT": "Desktop",
         "NAME": "Mark as Completed",
         "DATE": "May 6, 2017",
-        "DESC": "A tool helps you in Marking... <ul> <li>Movies,</li> <li>Series episodes,</li> <li>Courses videos,</li> <li>Lectures,</li> <li>Records,</li> <li>PDFs</li> </ul> as Completed, to facilitate their manipulating, and <b>save your time and effort.</b> <br>Don't memorize or move them the life is easier <p class='quote'>Just complete and let us mark <i class='fa fa-check'></i></p>",
+        "DESC": "A tool helps you in Marking... <ul> <li>Movies,</li> <li>Series episodes,</li> <li>Courses videos,</li> <li>Lectures,</li> <li>Records,</li> <li>PDFs</li> </ul> as Completed, to facilitate their manipulating, and <b>save your time and effort.</b> <br>Don't memorize or move them the life is easier <p class='quote'>Just complete, we mark <i class='fa fa-check'></i></p>",
         "PREVIEW": {
-            "DIR": "../../../../../Java/IntelliJ/Mark as Completed/",
+            "DIR": "desktop/Mark-as-Completed/",
             "ITEMS": [
                 {
                     "src": "Preview.gif",
