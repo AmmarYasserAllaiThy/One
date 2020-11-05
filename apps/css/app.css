@@ -28,6 +28,7 @@ a {
 .header,
 .title-section {
 	background: var(--title-bg);
+	background-image: var(--bg-url);
 	color: var(--_white);
 }
 

@@ -21,8 +21,9 @@
 }
 
 body {
-	font-size: 17px;
+	font-size: 16px;
 	background: var(--bg);
+	background-image: var(--bg-url);
 	color: var(--font);
 
 	--w: calc(1100px + 1em);
@@ -56,6 +57,8 @@ body {
 	--title-bg: var(--accent);
 	--layer-bg: var(--white);
 	--shadow: rgba(0, 0, 0, 0.05);
+
+	--bg-url: url(../images/apps/bg-pattern.png);
 }
 
 body.dark {
@@ -114,14 +117,16 @@ sup {
 .code-snippet,
 .quote {
 	background: var(--accent-inverse);
-	font-style: normal;
-	font-weight: normal;
+	/* background-image: var(--bg-url) !important; */
 }
 
 .code,
-.code-snippet {
+.code-snippet,
+.code-snippet * {
+	font-size: 14px;
 	font-family: monospace;
-	font-size: 0.9em;
+	font-weight: normal !important;
+	font-style: normal;
 }
 
 .code {
@@ -132,23 +137,20 @@ sup {
 
 .code-snippet {
 	overflow: auto;
-	/* box-shadow: 2px 0 4px var(--black); */
+	padding: 1em !important;
+	margin: 1em auto !important;
+	border-radius: 4px;
+	box-shadow: 1px 1px 3px var(--black-inverse);
 }
 
 .code-snippet,
 .quote {
 	display: block;
-	padding: 1em;
-	margin: 1em;
-}
-
-.code-snippet {
-	margin-left: 0;
-	margin-right: 0;
-	border-radius: 4px;
 }
 
 .quote {
+	margin: 1em;
+	padding: 1em;
 	border-left: 5px solid var(--accent);
 	text-align: justify;
 }
