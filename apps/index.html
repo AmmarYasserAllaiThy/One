@@ -7,22 +7,29 @@
     <title>Apps</title>
     <link rel="stylesheet" href="css/app.css">
     <style>
-        ul.abstract {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+        #section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 1em;
+        }
+
+        #h2,
+        #section {
+            max-width: 1000px;
+            margin: 1em auto;
+        }
+
+        #h2 {
+            text-align: center;
+        }
+
+        #h2,
+        .row {
             background: var(--accent-inverse);
             font-size: 1.75em;
-        }
-
-        ul,
-        .row {
             border-radius: 10px;
-        }
 
-        .row {
-            padding: 0.3em 2em 0.3em 0.75em;
+            padding: 0.5em 0.75em;
             position: relative;
             overflow: hidden;
         }
@@ -66,32 +73,79 @@
             border-top: 1px solid var(--accent-inverse);
         }
 
+        .row span {
+            margin: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            font-style: italic;
+            font-family: georgia, Verdana, sans-serif, monospace;
+            color: gray;
+        }
+
         @media screen and (max-width: 768px) {
-            ul.abstract {
-                left: 0;
-                transform: translate(0, calc(-50% - 1em));
-                font-size: 1.35em;
+            #section {
+                max-width: auto;
+                grid-template-columns: 1fr;
                 margin: 1em;
+            }
+
+            #h2 {
+                margin: 0;
+                border-radius: 0;
             }
         }
     </style>
 </head>
 
 <body>
-    <ul class="abstract">
-        <li class="row layer-title">My Apps</li>
+    <h2 id="h2" class="layer-title">My Apps</h2>
 
-        <li class="row Desktop"><a href="DCAT.html">Daily Classes Activity Tracker</a></li>
-        <li class="row Android">
-            <a href="https://play.google.com/store/search?q=Cropperoid&c=apps&hl=en">Cropperoid</a>
-        </li>
-        <li class="row Desktop"><a href="WIFI.html">Wi-Fi Passwords</a></li>
-        <li class="row Desktop"><a href="Mark.html">Mark as Completed</a></li>
-        <li class="row Web"><a href="https://just-paint.netlify.app">Just Paint</a></li>
-        <li class="row Desktop"><a href="Files.html">Files Manager</a></li>
-        <li class="row Desktop"><a href="Barcode.html">Barcode & Qrcode</a></li>
-        <li class="row"><a href="app-full-backup.html">_TEMPLATE</a></li>
-    </ul>
+    <section id="section">
+        <!-- 
+        <p class="row Desktop"><a href="app.html?key=DCAT">Daily Classes Activity Tracker</a></p>
+        <p class="row Desktop"><a href="app.html?key=WIFI">Wi-Fi Passwords</a></p>
+        <p class="row Desktop"><a href="app.html?key=Mark">Mark as Completed</a></p>
+        <p class="row Desktop"><a href="app.html?key=Files">Files Manager</a></p>
+        <p class="row Desktop"><a href="app.html?key=Barcode">Barcode & Qrcode</a></p>
+        <p class="row Web"><a href="https://just-paint.netlify.app">Just Paint</a></p>
+        <p class="row Android"><a href="https://play.google.com/store/search?q=Cropperoid&c=apps&hl=en">Cropperoid</a></p>
+        <p class="row"><a href="app-full-backup.html">_TEMPLATE</a></p>
+        -->
+    </section>
+
+    <script src="js/util.js"></script>
+    <script>
+        const createRow = (key, cat, name, date) => {
+            const p = create('p')
+            const a = create('a')
+            const span = create('span')
+
+            p.classList.add('row', cat)
+
+            a.innerHTML = name
+            a.href = 'app.html?key=' + key
+            span.innerHTML = date
+
+            p.appendChild(a)
+            p.appendChild(span)
+
+            return p
+        }
+
+        const add = child => document.querySelector('#section').appendChild(child)
+
+        readJsonFrom('json/apps_data.json', json => {
+            for (const key in json) {
+                const app = json[key]
+
+                let name = app.NAME
+                let cat = app.CAT
+                let date = app.DATE
+
+                add(createRow(key, cat, name, date))
+            }
+        })
+    </script>
 </body>
 
 </html>
