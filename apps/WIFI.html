@@ -4,10 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>App details</title>
+
     <link rel="icon" href="https://cdn1.iconfinder.com/data/icons/color-bold-style/21/09_1-512.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/app.css">
+
+    <script src="js/util.js"></script>
 </head>
 
 <body>
@@ -106,12 +110,13 @@
             { src: 'wifi.2.PNG', caption: "Displaying the password of the selected Wi-Fi network" },
             { src: 'wifi.3.PNG', caption: "Copy the password to clipboard" },
         ]
-        const APP_DESC =
-            `Simple App to find passwords of your known WiFi networks that you connected
+        const APP_DESC = `
+            Simple App to find passwords of your known WiFi networks that you connected
             to before in only 2 mouse clicks, instead of the other complex ways. And there's
             a button to copy the password directly.
 
-<pre class="code-snippet">
+            <pre>
+                <code class="code-snippet java">
 private void refresh() {
 
     if (osName.startsWith("Windows"))
@@ -122,7 +127,9 @@ private void refresh() {
 
     fillNetworks(listOfNetworks);
 
-}</pre>
+}
+                </code>
+            </pre>
             This method refresh the Wi-Fi networks then update the list.
             `
         const APP_DATE = 'Nov 27, 2018'
@@ -130,6 +137,7 @@ private void refresh() {
         const APP_TAGS = ['CMD', 'Wi-Fi', 'Network']
     </script>
 
+    <script src="js/highlight.pack.js"></script>
     <script src="js/ui.js"></script>
     <script src="js/data.js"></script>
 </body>

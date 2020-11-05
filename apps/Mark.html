@@ -4,10 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>App details</title>
+
     <link rel="icon" href="https://cdn1.iconfinder.com/data/icons/color-bold-style/21/09_1-512.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/app.css">
+
+    <script src="js/util.js"></script>
 </head>
 
 <body>
@@ -100,8 +104,8 @@
     <script>
         const APP_TYPE = 'Desktop'
         const APP_NAME = 'Mark as Completed'
-        const APP_IMAGES_DIR = 'desktop/'
-        const APP_IMAGES = [{ src: '', caption: "" },]
+        const APP_IMAGES_DIR = '../../../../../Java/IntelliJ/Mark as Completed/'
+        const APP_IMAGES = [{ src: 'Preview.gif', caption: "How to use" },]
         const APP_DESC =
             `A tool helps you in Marking...
             <ul>
@@ -112,15 +116,19 @@
                 <li>Records,</li>
                 <li>PDFs</li>
             </ul>
-            as Completed, to facilitate their manipulating, and save your time and effort.
-            <br>Don't memorize or move them, Just Mark as Completed
-            <p class='quote'>Completed it, Mark it <i class='fa fa-check'></i></p>
+            as Completed, to facilitate their manipulating, and <b>save your time and effort.</b>
+            <br>Don't memorize or move them the life is easier
+            <p class='quote'>Just complete and let us mark <i class='fa fa-check'></i></p>
             `
         const APP_DATE = 'May 6, 2017'
         const APP_SKILLS = ['Java']
         const APP_TAGS = ['Windows registry', 'Shell', 'Right-click menu', 'Files', 'Directories', 'CLI', 'OS',]
+        const APP_EXTERNAL_LINKS = [
+            { "Github": "https://github.com/AmmarYasserAllaiThy/Mark-as-Completed" }
+        ]
     </script>
 
+    <script src="js/highlight.pack.js"></script>
     <script src="js/ui.js"></script>
     <script src="js/data.js"></script>
 </body>
