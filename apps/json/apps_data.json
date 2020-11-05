@@ -1,0 +1,245 @@
+{
+    "dcat": {
+        "CAT": "Desktop",
+        "NAME": "Daily Classes Activity Tracker <sup>DCAT</sup>",
+        "DATE": "Nov 2019 - Jan 2020",
+        "DESC": "A desktop app built in <i class='code'>JavaFX</i> using <i class='code'>Scene Builder</i>, <i class='code'>IntelliJ</i>, and <i class='code'>Xampp</i> to facilitate tracking daily classes activities like Attendance, Homework level, Exams and its Attendance and Marks. And also keep an eye on income and outcome money then calculate Net Profit monthly, yearly, or even periodically. It can also track and manage reservations at the start of the year. It's a multi-user app with an Admin dashboard to manage users.",
+        "PREVIEW": {
+            "DIR": "desktop/DCAT/",
+            "ITEMS": [
+                {
+                    "src": "BAT_Output.PNG",
+                    "caption": "Initializing and configuring Database for first time use"
+                },
+                {
+                    "src": "Login.PNG",
+                    "caption": "Login form provided with teacher's data and contact"
+                },
+                {
+                    "src": "Dashboard.PNG",
+                    "caption": "Dashboard [Main screen] containing simple statistics, brief App description, teacher's data and contact, currently logged user, copyrights, and finally local date-time"
+                },
+                {
+                    "src": "Homework.PNG",
+                    "caption": "Homework screen"
+                },
+                {
+                    "src": "Exams.PNG",
+                    "caption": "Exams screen"
+                },
+                {
+                    "src": "Groups.PNG",
+                    "caption": "Groups screen"
+                },
+                {
+                    "src": "Students.PNG",
+                    "caption": "Students screen"
+                },
+                {
+                    "src": "Expenses.PNG",
+                    "caption": "Expenses screen"
+                },
+                {
+                    "src": "Outcomes.PNG",
+                    "caption": "Outcomes screen"
+                },
+                {
+                    "src": "Income.PNG",
+                    "caption": "Incomes screen"
+                },
+                {
+                    "src": "Profit.PNG",
+                    "caption": "Net Profit screen provided with total of income and outcome and <b>BarChart</b> to visualize and simplify the number language"
+                },
+                {
+                    "src": "Settings.PNG",
+                    "caption": "Settings screen"
+                },
+                {
+                    "src": "Info.PNG",
+                    "caption": "App info pop-up"
+                },
+                {
+                    "src": "Pause.PNG",
+                    "caption": "Pause machanism"
+                },
+                {
+                    "src": "Licence.PNG",
+                    "caption": "Licence includes DCAT_ID"
+                }
+            ]
+        },
+        "SKILLS": [
+            "Java",
+            "OOP",
+            "SQL",
+            "JavaFX",
+            "CSS",
+            "JasperReports",
+            "PhpMyAdmin"
+        ],
+        "TAGS": [
+            "Tracker",
+            "Management",
+            "Printing",
+            "Reports",
+            "Income monitor",
+            "Multi users",
+            "Pie Chart",
+            "Bar Chart",
+            "StackedBar Chart",
+            "Line Chart"
+        ]
+    },
+    "files": {
+        "CAT": "Desktop",
+        "NAME": "Files Manager",
+        "DATE": "Aug 3, 2017",
+        "DESC": "<p class='ar'>أنا زهجت<br>مش لاقي ديسكريبشن اكتبه اقسم بالله</p>",
+        "PREVIEW": {
+            "DIR": "desktop/Files-Manager/",
+            "ITEMS": [
+                {
+                    "src": "Main.PNG",
+                    "caption": "Main screen"
+                },
+                {
+                    "src": "Create.1.PNG",
+                    "caption": "Create folder structure similar to the source folder structure as child in the destination folder"
+                },
+                {
+                    "src": "Create.2.PNG",
+                    "caption": "Create (n) files in the destination folder with the same type, and numbered initial name"
+                },
+                {
+                    "src": "Delete.PNG",
+                    "caption": "Delete"
+                },
+                {
+                    "src": "Rename.PNG",
+                    "caption": "Rename"
+                },
+                {
+                    "src": "Move.PNG",
+                    "caption": "Move"
+                },
+                {
+                    "src": "Copy.PNG",
+                    "caption": "Copy"
+                },
+                {
+                    "src": "Enumerate.PNG",
+                    "caption": "Enumerate"
+                }
+            ]
+        },
+        "SKILLS": [
+            "Java",
+            "OOP",
+            "Swing"
+        ],
+        "TAGS": [
+            "Files",
+            "Folders",
+            "Grouping",
+            "Create",
+            "Delete",
+            "Rename",
+            "Shred",
+            "Move",
+            "Copy",
+            "Enumerate"
+        ]
+    },
+    "wifi": {
+        "CAT": "Desktop",
+        "NAME": "Wi-Fi Passwords",
+        "DATE": "Nov 27, 2018",
+        "DESC": "Simple App to find passwords of your known WiFi networks that you connected to before in only 2 mouse clicks, instead of the other complex ways. And there's a button to copy the password directly.<pre><code class='code-snippet java'>private void refresh() {\n\n    if (osName.startsWith(\"Windows\"))\n        refreshInWindows();\n\n    else if (osName.equals(\"Linux\"))\n        refreshInLinux();\n\n    fillNetworks(listOfNetworks);\n\n}</code></pre>This method refresh the Wi-Fi networks then update the list.",
+        "_DESC": "Simple App to find passwords of your known WiFi networks that you connected to before in only 2 mouse clicks, instead of the other complex ways. And there's a button to copy the password directly.<pre><code class='code-snippet java'>private void refresh() {<br><br>    if (osName.startsWith(\"Windows\"))<br>        refreshInWindows();<br><br>    else if (osName.equals(\"Linux\"))<br>        refreshInLinux();<br><br>    fillNetworks(listOfNetworks);<br><br>}</code></pre>This method refresh the Wi-Fi networks then update the list.",
+        "PREVIEW": {
+            "DIR": "desktop/WiFi-Passwords/",
+            "ITEMS": [
+                {
+                    "src": "wifi.1.PNG",
+                    "caption": "List all the known Wi-Fi networks that connected to before"
+                },
+                {
+                    "src": "wifi.2.PNG",
+                    "caption": "Displaying the password of the selected Wi-Fi network"
+                },
+                {
+                    "src": "wifi.3.PNG",
+                    "caption": "Copy the password to clipboard"
+                }
+            ]
+        },
+        "SKILLS": [
+            "Java",
+            "Swing"
+        ],
+        "TAGS": [
+            "CMD",
+            "Wi-Fi",
+            "Network"
+        ]
+    },
+    "mark": {
+        "CAT": "Desktop",
+        "NAME": "Mark as Completed",
+        "DATE": "May 6, 2017",
+        "DESC": "A tool helps you in Marking... <ul> <li>Movies,</li> <li>Series episodes,</li> <li>Courses videos,</li> <li>Lectures,</li> <li>Records,</li> <li>PDFs</li> </ul> as Completed, to facilitate their manipulating, and <b>save your time and effort.</b> <br>Don't memorize or move them the life is easier <p class='quote'>Just complete and let us mark <i class='fa fa-check'></i></p>",
+        "PREVIEW": {
+            "DIR": "../../../../../Java/IntelliJ/Mark as Completed/",
+            "ITEMS": [
+                {
+                    "src": "Preview.gif",
+                    "caption": "How to use"
+                }
+            ]
+        },
+        "SKILLS": [
+            "Java"
+        ],
+        "TAGS": [
+            "Windows registry",
+            "Shell",
+            "Right-click menu",
+            "Files",
+            "Directories",
+            "CLI",
+            "OS"
+        ],
+        "EXTERNAL_LINKS": [
+            {
+                "Github": "https://github.com/AmmarYasserAllaiThy/Mark-as-Completed"
+            }
+        ]
+    },
+    "barcode": {
+        "CAT": "Desktop",
+        "NAME": "Barcode & Qrcode",
+        "DATE": "Sep 18, 2018",
+        "DESC": "A tool helps you with Generating and reading barcode or qrcode using <b>apache poi</b>. It's also enable you from saving the generated pattern to your disk as a <i class='code'>png</i> image. <br>Simple and clear UI design.",
+        "PREVIEW": {
+            "DIR": "desktop/",
+            "ITEMS": [
+                {
+                    "src": "barcode.PNG",
+                    "caption": "Main screen"
+                }
+            ]
+        },
+        "SKILLS": [
+            "Java",
+            "Swing",
+            "Apache POI"
+        ],
+        "TAGS": [
+            "Barcode",
+            "Qrcode",
+            "Reader",
+            "Generator"
+        ]
+    }
+}
