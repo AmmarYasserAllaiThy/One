@@ -100,22 +100,11 @@
 <body>
     <h2 id="h2" class="layer-title">My Apps</h2>
 
-    <section id="section">
-        <!-- 
-        <p class="row Desktop"><a href="app.html?key=DCAT">Daily Classes Activity Tracker</a></p>
-        <p class="row Desktop"><a href="app.html?key=WIFI">Wi-Fi Passwords</a></p>
-        <p class="row Desktop"><a href="app.html?key=Mark">Mark as Completed</a></p>
-        <p class="row Desktop"><a href="app.html?key=Files">Files Manager</a></p>
-        <p class="row Desktop"><a href="app.html?key=Barcode">Barcode & Qrcode</a></p>
-        <p class="row Web"><a href="https://just-paint.netlify.app">Just Paint</a></p>
-        <p class="row Android"><a href="https://play.google.com/store/search?q=Cropperoid&c=apps&hl=en">Cropperoid</a></p>
-        <p class="row"><a href="app-full-backup.html">_TEMPLATE</a></p>
-        -->
-    </section>
+    <section id="section"></section>
 
     <script src="js/util.js"></script>
     <script>
-        const createRow = (key, cat, name, date) => {
+        const createRow = (href, cat, name, date) => {
             const p = create('p')
             const a = create('a')
             const span = create('span')
@@ -123,7 +112,8 @@
             p.classList.add('row', cat)
 
             a.innerHTML = name
-            a.href = 'app.html?key=' + key
+            a.href = href
+            a.target = '_blank'
             span.innerHTML = date
 
             p.appendChild(a)
@@ -134,7 +124,14 @@
 
         const add = child => document.querySelector('#section').appendChild(child)
 
+        const GITHUB_PROFILE = 'https://github.com/AmmarYasserAllaiThy/'
+
         readJsonFrom('json/apps_data.json', json => {
+            add(createRow(GITHUB_PROFILE + 'ND-NewsFeed', 'Android', 'News Feed <sup>ND</sup>', 'Apr 2020'))
+            add(createRow(GITHUB_PROFILE + 'qamardeen-android', 'Android', 'QamarDeen <sup>fork</sup>', 'May 2020'))
+            add(createRow(GITHUB_PROFILE + 'ND-TourGuide', 'Android', 'Tour Guide <sup>ND</sup>', 'Mar 2020'))
+            add(createRow(GITHUB_PROFILE + 'ND-QuizApp', 'Android', 'Quizzes App <sup>ND</sup>', 'Mar 2020'))
+
             for (const key in json) {
                 const app = json[key]
 
@@ -142,8 +139,12 @@
                 let cat = app.CAT
                 let date = app.DATE
 
-                add(createRow(key, cat, name, date))
+                add(createRow('app?key=' + key, cat, name, date))
             }
+
+            add(createRow('https://just-paint.netlify.app/', 'Web', 'Just Paint', 'Nov 2019'))
+            add(createRow('https://rgb-to-hex.netlify.app/?hex=c85a96', 'Web', 'RGB ⇔ Hex', 'Feb 2018'))
+            add(createRow('https://codepen.io/Ammar_Yasser/full/BbBQya', 'Web', 'Char to ASCII', 'Jul 2018'))
         })
     </script>
 </body>
