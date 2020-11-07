@@ -4,8 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Apps</title>
+
+    <link rel="icon" href="https://cdn1.iconfinder.com/data/icons/color-bold-style/21/09_1-512.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/app.css">
+
     <style>
         #section {
             display: grid;
@@ -95,6 +100,8 @@
             }
         }
     </style>
+
+    <script src="js/util.js"></script>
 </head>
 
 <body>
@@ -102,7 +109,6 @@
 
     <section id="section"></section>
 
-    <script src="js/util.js"></script>
     <script>
         const createRow = (href, cat, name, date) => {
             const p = create('p')
@@ -128,7 +134,7 @@
 
         readJsonFrom('json/apps_data.json', json => {
             add(createRow(GITHUB_PROFILE + 'ND-NewsFeed', 'Android', 'News Feed <sup>ND</sup>', 'Apr 2020'))
-            add(createRow(GITHUB_PROFILE + 'qamardeen-android', 'Android', 'QamarDeen <sup>fork</sup>', 'May 2020'))
+            add(createRow(GITHUB_PROFILE + 'qamardeen-android', 'Android', 'QamarDeen <sup><i class="fa fa-code-fork"></i></sup>', 'May 2020'))
             add(createRow(GITHUB_PROFILE + 'ND-TourGuide', 'Android', 'Tour Guide <sup>ND</sup>', 'Mar 2020'))
             add(createRow(GITHUB_PROFILE + 'ND-QuizApp', 'Android', 'Quizzes App <sup>ND</sup>', 'Mar 2020'))
 
@@ -147,6 +153,14 @@
             add(createRow('https://codepen.io/Ammar_Yasser/full/BbBQya', 'Web', 'Char to ASCII', 'Jul 2018'))
         })
     </script>
+
+    <!--*--------------------- Footer start ----------------------->
+    <footer class="footer">
+        <p>Developed with <i class="fa fa-heart" style="color: red;"></i> by Ammar Yasser AllaiThy</p>
+        <p class="code">All rights reserved <i class="fa fa-copyright"></i> 2020</p>
+    </footer>
+    <!--*--------------------- Footer end ----------------------->
+
 </body>
 
 </html>
