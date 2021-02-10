@@ -5,31 +5,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>404</title>
+    <title>404 - Not Found</title>
 
     <link rel="icon" href="https://cdn1.iconfinder.com/data/icons/color-bold-style/21/09_1-512.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/app.css">
 
     <style>
-        body {
-            background-color: rgba(255, 0, 0, 0.1);
-        }
-
-        h2.large-title {
-            width: 100%;
+        section.contianer {
+            background: var(--accent-inverse);
+            min-width: 30%;
+            max-width: 100%;
+            border-radius: 1em;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             text-align: center;
-            font-size: 5em;
+            box-shadow: 0 0 20px var(--accent-inverse);
+        }
+
+        h2.large-title._404 {
+            font-size: 6em;
+        }
+
+        h2.large-title {
+            font-size: 3em;
+            margin: 1rem 2rem 0;
+        }
+
+        a.main-a {
+            display: block;
+            outline: none;
+            padding: 0.5em 1em;
+            margin-top: 2em;
+            background: var(--accent-inverse);
+            color: var(--white);
+            border-top: 1px solid;
+            border-radius: 0 0 10px 10px;
+        }
+
+        a.main-a:hover {
+            color: var(--white);
+            background: var(--accent);
         }
     </style>
 </head>
 
 <body>
-    <h2 class="large-title">404<br>App !found</h2>
+    <section class="contianer">
+        <h2 class="large-title _404">404</h2>
+        <h2 class="large-title">App !Found</h2>
+        <a class="main-a title" href=".">Go to Main Page</a>
+    </section>
 </body>
 
 </html>

@@ -50,12 +50,6 @@ const initDots = () => {
     }))
 }
 
-const createLi = text => {
-    let li = document.createElement('li')
-    li.textContent = text
-    return li
-}
-
 
 //! REGISTER EVENTS
 appImage.addEventListener('click', () => appImage.classList.toggle('long'))

@@ -40,7 +40,7 @@ const dark = () => {
     }
 }
 
-const toggleMenu = () => navUL.classList.toggle(responsive)
+const toggleMenu = () => document.querySelector('.nav-ul').classList.toggle(responsive)
 const hideMenu = () => navUL.classList.remove(responsive)
 
 
@@ -53,9 +53,8 @@ window.addEventListener('resize', hideMenu)
 
 navAs.forEach(a => a.addEventListener('click', hideMenu))
 
-adjust.addEventListener('click', dark)
-
-bars.addEventListener('click', toggleMenu)
+// adjust.addEventListener('click', dark)
+// bars.addEventListener('click', toggleMenu)
 
 
 //! Confirm UI reliability

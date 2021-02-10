@@ -1,6 +1,7 @@
 apps/app-full-backup.html
 apps/temp.app.html
 apps/temp.html
+apps/include.html
 apps/temp.json
 apps/app-full-backup.html
 apps/css/highlight/codepen-embed.css
@@ -11,6 +12,7 @@ apps/css/highlight/night-owl.css
 apps/css/highlight/nord.css
 apps/css/highlight/railscasts.css
 apps/css/highlight/tomorrow-night.css
+apps/trash
 logo.jpg
 logo.html
 newlook.html

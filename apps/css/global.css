@@ -1,8 +1,8 @@
-@import 'https://fonts.googleapis.com/css?family=Gotu|Laila';
+@import "https://fonts.googleapis.com/css?family=Gotu|Laila";
 
 * {
 	box-sizing: border-box;
-	font-family: Gotu, La ila, Segoe UI, Verdana, sans-serif;
+	font-family: Gotu, Laila, Segoe UI, Verdana, sans-serif;
 }
 
 *:not(ol):not(ul) {

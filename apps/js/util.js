@@ -19,6 +19,12 @@ const createScript = src => {
     return script
 }
 
+const createLi = html => {
+    let li = create('li')
+    li.innerHTML = html
+    return li
+}
+
 const loadLink = href => { return appendToHead(createLink(href)) }
 
 const loadScript = src => { return appendToHead(createScript(src)) }
@@ -65,3 +71,39 @@ const getParamsOf = url => {
     }
     return params
 }
+
+const includeHTML = () => {
+    const INCLUDE_CLASS_NAME = 'include'
+    const INCLUDE_ATTRIBUTE = 'file'
+    const INCLUDE_ELEMS = document.getElementsByClassName(INCLUDE_CLASS_NAME)
+
+    for (const elem of INCLUDE_ELEMS) {
+        // search for elements with a certain atrribute
+        let file = elem.getAttribute(INCLUDE_ATTRIBUTE)
+
+        if (file) {
+            // make an HTTP request using the attribute value as the file name
+            let xhttp = new XMLHttpRequest()
+
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4) {
+                    let content
+                    if (this.status == 200) content = this.responseText
+                    else if (this.status == 404) content = "Page not found."
+                    elem.innerHTML = content
+
+                    // remove the attribute, and call this function once more
+                    elem.removeAttribute(INCLUDE_ATTRIBUTE)
+                    includeHTML()
+                }
+            }
+            xhttp.open("GET", file, true)
+            xhttp.send()
+
+            // exit the function
+            return
+        }
+    }
+}
+
+window.onload = () => includeHTML()
